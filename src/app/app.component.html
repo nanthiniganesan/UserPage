@@ -1,0 +1,144 @@
+<div class="user-selection">
+  <h3>Choose a user:</h3>&nbsp;
+  <mat-button-toggle-group [formControl]="fontStyleControl" (click)="toggleButton(value)">
+    <mat-button-toggle value="firstUser">User 1</mat-button-toggle>
+    <mat-button-toggle value="secondUser">User 2</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>
+<div *ngIf="fontStyleControl.touched">
+  <div class="container-fluid">
+    <div class="entire-page">
+      <p class="p-path">Home / Data Modules / Leads / {{user.name}}</p>
+      <div class="center">
+        <mat-toolbar>
+          <i class="fa fa-arrow-left" aria-hidden="true"></i>
+          <span>{{user.name}}&#8208;{{user.id}}</span>
+          <span class="example-spacer"></span>
+          <select name="action" id="action" class="dropdown">
+            <option>Action</option>
+            <option>Another Action</option>
+          </select>
+        </mat-toolbar>
+        <mat-divider></mat-divider>
+        <mat-toolbar>
+          <span class="material-symbols-outlined">account_circle</span>&nbsp;
+          <span style="padding-left: 10px; padding-bottom: 0%;">
+            <span>{{user.name}}
+              <span>
+                <a href="http://www.facebook.com" class="fa fa-facebook"></a>
+                <a href="hhtp://www.twitter.com" class="fa fa-twitter"></a>
+                <a href="http://www.linkedin.com" class="fa fa-linkedin"></a>
+              </span>
+            </span><br>
+            <span style="font-size:small;">{{user.address}}</span>
+          </span>
+
+          <span class="example-spacer"></span>
+          <button class="buttondesign">Add Attachments</button>
+          <button class="buttondesign">Add Tasks</button>
+          <button class="buttondesign">Add Call</button>
+        </mat-toolbar>
+      </div>
+      <div>
+        <mat-grid-list cols="4" rowHeight="350px" [gutterSize]="'10px'">
+          <mat-grid-tile colspan="1">
+            <mat-card class="gridNav" style="width: 100%; height:100%; text-align: left;">
+              <mat-card-title>Record Information</mat-card-title>
+              <mat-card-content><button class="navBarFeel">Overview</button></mat-card-content>
+              <mat-card-content><button class="navBarFeelHigh">Record Details</button></mat-card-content>
+              <mat-card-content><button class="navBarFeel">Activities</button></mat-card-content>
+              <mat-card-content><button class="navBarFeel">Attachments</button></mat-card-content>
+              <mat-card-content><button class="navBarFeel">Task</button></mat-card-content>
+              <mat-card-content><button class="navBarFeel">View History</button></mat-card-content>
+            </mat-card>
+          </mat-grid-tile>
+          <mat-grid-tile colspan="3">
+            <mat-card style="width: 100%; height:100%; text-align: left; size:'small'">
+              <mat-card-title>Record Details</mat-card-title>
+              <button type="button" class="collapsible">Basic Details</button>
+              <button type="button" name="col" class="collapsible">Other Details</button>
+              <div style="font-size: small;" id="myDIV" fxFlexAlign="stretch">
+                <table id="myTable" style="width:100%; height:80%;">
+                  <tr>
+                    <td>
+                      <mat-card>
+                        <mat-card-title style="font-size: small;">Owner</mat-card-title>
+                        <mat-card-content>{{user.customOwner}}</mat-card-content>
+                      </mat-card>
+                    </td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Job Title</mat-card-title>
+                        <mat-card-content>{{user.jobtitle}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Custom long header than we expect</mat-card-title>
+                        <mat-card-content>{{user.customOwner}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Custom long header than we expect</mat-card-title>
+                        <mat-card-content>{{user.customOwner}}</mat-card-content>
+                      </mat-card></td>
+                  </tr>
+                  <tr>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Address</mat-card-title>
+                        <mat-card-content>{{user.address}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                  </tr>
+                  <tr>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Email</mat-card-title>
+                        <mat-card-content>{{user.email}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Source</mat-card-title>
+                        <mat-card-content>{{user.source}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                  </tr>
+                  <tr>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Company</mat-card-title>
+                        <mat-card-content style="font-size: small;">Add Company</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Custom Data</mat-card-title>
+                        <mat-card-content>{{user.customdata}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                    <td><mat-card>
+                        <mat-card-title style="font-size: small;">Phone</mat-card-title>
+                        <mat-card-content>{{user.phone}}</mat-card-content>
+                      </mat-card></td>
+                  </tr>
+                </table>
+              </div>
+            </mat-card>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </div>
+  </div>
+</div>

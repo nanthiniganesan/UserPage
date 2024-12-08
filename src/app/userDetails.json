@@ -1,0 +1,28 @@
+[
+  {
+    "id": "LID0001",
+    "name": "Eleanor Pena",
+    "email": "eleanorpena@yahoo.com",
+    "company": 2,
+    "jobtitle": "CTO",
+    "mobile": "738422532",
+    "address": "2972 Westheimer Rd,Santa Ana, Illinois 85486",
+    "source": "direct",
+    "customdata": "Lorem ipsum dolor sit amet, consecte..",
+    "phone": "+919876543210",
+    "customOwner": "Divya Ramasamy"
+  },
+  {
+    "id": "LID0002",
+    "name": "Eleanor Second",
+    "email": "eleanorSecond@yahoo.com",
+    "company": 1,
+    "jobtitle": "CFO",
+    "mobile": "9876544321",
+    "address": "29 Westheimer Rd,Santa Ana, Illinois 854",
+    "source": "Indirect",
+    "customdata": " ",
+    "phone": "+919876543210",
+    "customOwner": "Divya Samysamy"
+  }
+]
